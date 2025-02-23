@@ -11,7 +11,7 @@ body
 }
 .header
 {
-    position: fixed s;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -29,19 +29,21 @@ body
     text-decoration: none;
     font-weight: 600;
     cursor: default;
-    opacity: 0;
+    /* opacity: ; */
     animation: slideRight 1s ease forwards;
 }
 .navbar a{
     display: inline-block;
-    font-size: 25px;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bolder;
+    text-transform: uppercase;
     margin-left: 35px;
     transition: .3s;
-    opacity:0;
+    /* opacity:; */
     animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
 }
 .navbar a:hover{
     color: #0ef;
@@ -58,16 +60,23 @@ body
     padding: 70px 10% 0;
 }
 
+
 .home-content {
     max-width: 600px;
 }
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
+    /* opacity :; */
+    animation: slideBottom is ease forwards;
+    animation-delay: .7s;
    
 }
 .home-content h3:nth-of-type(2){
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    animation: slideTop is ease forwards;
+    animation-delay: 1s;
+
 
 }
 .home-content h3 span {
@@ -77,11 +86,16 @@ body
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
-    
+    /* opacity: ; */
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
 
 }
 .home-content p {
     font-size:20px;
+    /* opacity: ; */
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
 
 }
 .home-sci a {
@@ -96,6 +110,10 @@ body
     font-size: 20px;
     color: #0ef;
     text-decoration: none;
+    transition: .5s ease;
+    /* opacity :; */
+    animation: slideLeft is ease forwards;
+    animation-delay: calc(.2s*var(--i));
     margin: 30px 15px 30px 0;
 }
 .home-sci a:hover {
@@ -103,7 +121,7 @@ body
     color: #081b29;
     box-shadow: 0 0 20px #0ef;
 }
-.btn-box:hover {
+.btn-box {
     display: inline-block;
     padding: 12px 28px;
     background: #0ef;
@@ -113,6 +131,11 @@ body
     letter-spacing: 1px;
     text-decoration:none;
     font-weight: 600;
+    /* opacity: ; */
+    animation: slideRight 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow:0 0 5px #0ef;
+    /* 0 0 25px #0ef */
 }
 .btn-box:hover {
     box-shadow: 0 0 5px cyan,
@@ -120,9 +143,25 @@ body
     0 0 100px cyan, 0 0 200px cyan
 }
 
+/* .text{
+    color: white;
+    background-color: red;
+    padding: 50px;
+} */
+
 @keyframes slideright {
     0% {
         transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideleft {
+    0% {
+        transform: translateX(100px);
         opacity: 0;
     }
     100% {
