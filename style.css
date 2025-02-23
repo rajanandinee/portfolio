@@ -143,12 +143,6 @@ body
     0 0 100px cyan, 0 0 200px cyan
 }
 
-/* .text{
-    color: white;
-    background-color: red;
-    padding: 50px;
-} */
-
 @keyframes slideright {
     0% {
         transform: translateX(-100px);
